@@ -1,0 +1,18 @@
+.banner-box {
+    background: #eeeeee;
+    padding: $gutter;
+    border-top: #cecece solid rem(1);
+    border-bottom: #cecece solid rem(1);
+
+    @media #{$phone-media} {
+        padding: 0;
+    }
+    
+    img {
+        margin: 0 auto; 
+
+        @media #{$phone-media} {
+            width: 100%;
+        }
+    }
+}
