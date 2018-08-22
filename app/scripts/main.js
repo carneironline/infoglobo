@@ -25,4 +25,7 @@ request
         $('.js-mainf3-list').html(mainf3List(mainF3)).removeClass('is-invisible');
         $('.js-brasil-list').html(brasilList(brasil)).removeClass('is-invisible');
         $('.js-mundo-list').html(mundoList(mundo)).removeClass('is-invisible');
+    })
+    .always(() => {
+        $('.banner-box').removeClass('is-invisible');
     });
