@@ -1,0 +1,29 @@
+.menu-bar {
+    height: rem(100);
+    background: $color1;
+    padding: $gutter;
+    display: flex;
+    align-items: center;
+
+    @media #{$phone-media} {
+        height: rem(50);  
+        padding: $gutter / 2;
+    }
+
+    .-logo {
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .-icon {
+        width: rem(24);
+
+        .-item {
+            height: rem(4);
+            background-color: $color2;
+            margin: rem(4) 0;
+        }
+    }
+} 
+
+ 

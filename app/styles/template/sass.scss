@@ -1,0 +1,16 @@
+//MIXINS
+@mixin font-size($sizeValue: 16) {
+    font-size: $sizeValue + px;
+    font-size: ($sizeValue / 10) + rem;
+}
+
+//FUNCTIONS
+@function rem($valuePX) {
+    @return ($valuePX / 10) + rem;
+}
+
+//EXTENDS
+%screen-max-width {
+    max-width: rem(1024);
+    margin: 0 auto;
+} 

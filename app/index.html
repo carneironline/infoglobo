@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>globo</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <nav class="menu-bar">
+      <div class="-icon">
+        <div class="-item"></div>
+        <div class="-item"></div>
+        <div class="-item"></div>
+      </div>
+
+      <img class="is-responsive -logo" src="images/template/logo.png"  alt="Nullam arcu lacus, tincidunt vel efficitur" title="Nullam arcu lacus, tincidunt vel efficitur" />
+    </nav>
+
+    <section class="container-box cols-2 js-mainf1-list is-invisible">
+    </section>
+
+    <section class="container-box cols-2 js-mainf2-list is-invisible">
+    </section>
+
+    <section class="container-box cols-4 js-mainf3-list is-invisible">
+    </section>
+      
+    <section class="home-section js-brasil-list is-invisible">
+    </section>
+
+    <section class="home-section js-mundo-list is-invisible">
+    </section>
+
+    <footer class="footer-box">
+      <div class="-logo">
+        <img class="is-responsive -img" src="images/template/logo-footer.png" alt="Nullam arcu lacus, tincidunt vel efficitur" title="Nullam arcu lacus, tincidunt vel efficitur" />
+      </div>
+      
+      <div class="-copyright">
+          COPYRIGHT © 2017<br />
+          TODOS OS DIREITOS RESERVADOS
+      </div>
+    </footer>
+
+      
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/html" id="listLg">
+      <% _.forEach(data, function(a) { %>
+      <article class="article-lg">
+          <a href="<%- a.url %>">
+            <i class="ico ico-link"></i> 
+            <img class="-img is-responsive" src="images/media/<%- a.image %>" alt="<%- a.title %>" title="<%- a.title %>">
+  
+            <div class="-info">
+                <div class="-category"><%- a.label %></div>
+                <div class="-title"><%- a.title %></div>
+                <div class="-description"><%- a.description %></div>
+            </div>
+          </a>
+        </article>
+        <% }); %> 
+    </script>
+
+    <script type="text/html" id="listMd">
+      <% _.forEach(data, function(a) { %>
+      <article class="article-md">
+          <a href="<%- a.url %>" class="-target"> 
+            <img class="-img is-responsive" src="images/media/<%- a.image %>" alt="<%- a.title %>" title="<%- a.title %>">
+  
+            <div class="-info">
+                <div class="-category"><%- a.label %></div>
+                <div class="-title"><%- a.title %></div>
+                <div class="-description"><%- a.description %></div>
+                <i class="ico ico-link"></i>
+            </div>
+          </a>
+        </article>
+        <% }); %> 
+    </script>
+
+    <script type="text/html" id="listSm1">
+      <% _.forEach(data, function(a) { %>
+      <article class="article-sm">
+          <a href="<%- a.url %>">
+            <img class="-img is-responsive" src="images/media/<%- a.image %>" alt="<%- a.title %>" title="<%- a.title %>">
+            <div class="-category"><%- a.label %></div>
+            <div class="-title"><%- a.title %></div>
+            <div class="-description"><%- a.description %></div>
+            <i class="ico ico-link"></i>
+          </a>
+        </article>
+        <% }); %> 
+    </script>
+
+    <script type="text/html" id="listSm2">
+      <header class="-header"><%- name %></header>
+
+      <section class="container-box cols-4">
+          <% _.forEach(data, function(a) { %>
+          <article class="article-sm">
+            <a href="<%- a.url %>" class="-target">
+              <img class="-img is-responsive" src="images/media/<%- a.image %>" alt="<%- a.title %>" title="<%- a.title %>">
+                <div class="-category"><%- a.label %></div>
+                <div class="-title"><%- a.title %></div>
+                <div class="-description"><%- a.description %></div>
+                <i class="ico ico-link"></i>
+            </a>
+          </article>
+          <% }); %> 
+      </section>
+
+      <footer class="-footer"><a class="-link" href=""><%- name %> +</a></footer>
+
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,40 @@
+.home-section {
+    @extend %screen-max-width;
+
+    .-header {
+        padding: $gutter $gutter rem(5) $gutter;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include font-size(24);
+        color: $color1;
+    
+        @media #{$phone-media} {
+            padding: ($gutter / 2) ($gutter / 2) rem(5) ($gutter / 2);
+        }
+    }
+
+    .container-box {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .article-sm:nth-child(1) {
+            padding-top: 0;   
+        }
+    }
+
+    .-footer {
+        text-align: right;
+        padding: ($gutter/2) $gutter rem(5) $gutter; 
+        @include font-size(18);
+        font-weight: bold;
+
+        @media #{$phone-media} {
+            padding: rem(10) ($gutter / 2) rem(10) ($gutter / 2);
+        }
+
+        .-link {
+            color: $color1;
+        }
+    }
+
+}

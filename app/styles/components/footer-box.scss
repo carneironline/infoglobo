@@ -1,0 +1,36 @@
+.footer-box {
+    background: $color4;
+
+    @media #{$screen-media} {
+        margin-top: $gutter/2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+
+    .-logo {
+        padding: $gutter;
+
+        @media #{$phone-media} {
+            margin: 0 auto;
+            height: rem(85);
+
+            .-img {
+                margin: 0 auto;
+            }
+        } 
+    }
+
+    .-copyright {
+        padding: $gutter;
+        @include font-size(10);
+
+        @media #{$phone-media} {
+            margin: 0 auto;
+            height: rem(85);
+            background: $color1;
+            color: $color2;
+            text-align: center;
+        } 
+    }
+}
